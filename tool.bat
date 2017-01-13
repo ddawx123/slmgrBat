@@ -1,23 +1,23 @@
 @echo off
 color 0a
-title Windows æ¿€æ´»ç ´è§£ - æœ¬è„šæœ¬ä»…ä¾›å­¦ä¹ ï¼Œè¯·ä½¿ç”¨å¾®è½¯æ­£ç‰ˆè½¯ä»¶
+title Windows ¼¤»îÆÆ½â - ±¾½Å±¾½ö¹©Ñ§Ï°£¬ÇëÊ¹ÓÃÎ¢ÈíÕý°æÈí¼þ
 :menu
-echo ------------------NT10 - LTSB Serveræ¿€æ´»è„šæœ¬ å°ä¸å·¥ä½œå®¤å‡ºå“----------------------------------------
+echo ------------------NT10 - LTSB Server¼¤»î½Å±¾ Ð¡¶¡¹¤×÷ÊÒ³öÆ·----------------------------------------
 echo.
 echo.
-echo åœ¨å¼€å§‹æ¿€æ´»å‰è¯·æ³¨æ„ï¼Œä½ éœ€è¦ä¸€ä¸ªæœ‰æ•ˆçš„äº’è”ç½‘è¿žæŽ¥ï¼Œæˆ–ç¡®ä¿ä½ çš„ç”µè„‘å¯ä»¥è¿žæŽ¥110.noip.me ã€‚
-echo ç¡®ä¿ä½ ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œæœ¬è„šæœ¬ï¼Œå¦åˆ™è¯·å…³é—­æœ¬çª—å£é‡æ–°å¯åŠ¨ã€‚
-echo å¦‚æžœæ»¡è¶³ä»¥ä¸Šæ¡ä»¶ï¼Œè¯·è¾“å…¥æ‰€éœ€ç¼–å·çš„ç³»ç»Ÿå¼€å§‹æ¿€æ´»ã€‚
+echo ÔÚ¿ªÊ¼¼¤»îÇ°Çë×¢Òâ£¬ÄãÐèÒªÒ»¸öÓÐÐ§µÄ»¥ÁªÍøÁ¬½Ó£¬»òÈ·±£ÄãµÄµçÄÔ¿ÉÒÔÁ¬½Ó110.noip.me ¡£
+echo È·±£ÄãÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ±¾½Å±¾£¬·ñÔòÇë¹Ø±Õ±¾´°¿ÚÖØÐÂÆô¶¯¡£
+echo Èç¹ûÂú×ãÒÔÉÏÌõ¼þ£¬ÇëÊäÈëËùÐè±àºÅµÄÏµÍ³¿ªÊ¼¼¤»î¡£
 echo.
 echo.
-echo ç›®å‰å¯ç”¨æ¨¡æ¿ï¼š
+echo Ä¿Ç°¿ÉÓÃÄ£°å£º
 echo.
-echo 1ã€è¿è¡Œwin10-ltsb2016æ¿€æ´»æµç¨‹
-echo 2ã€è¿è¡Œwin10-ltsb2016-næ¿€æ´»æµç¨‹
-echo 3ã€è¿è¡Œwin2016-server-standardæ¿€æ´»æµç¨‹
-echo 4ã€è¿è¡Œwin2016-server-datacenteræ¿€æ´»æµç¨‹
-echo 5ã€è¿è¡Œwin2016-server-essentialsæ¿€æ´»æµç¨‹
-set /p c=è¯·è¾“å…¥ç¼–å·å¹¶å›žè½¦ï¼š
+echo 1¡¢ÔËÐÐwin10-ltsb2016¼¤»îÁ÷³Ì
+echo 2¡¢ÔËÐÐwin10-ltsb2016-n¼¤»îÁ÷³Ì
+echo 3¡¢ÔËÐÐwin2016-server-standard¼¤»îÁ÷³Ì
+echo 4¡¢ÔËÐÐwin2016-server-datacenter¼¤»îÁ÷³Ì
+echo 5¡¢ÔËÐÐwin2016-server-essentials¼¤»îÁ÷³Ì
+set /p c=ÇëÊäÈë±àºÅ²¢»Ø³µ£º
 if %c%==1 goto ltsb2016
 if %c%==2 goto ltsb2016n
 if %c%==3 goto svr2016std
@@ -25,42 +25,42 @@ if %c%==4 goto svr2016dtc
 if %c%==5 goto svr2016ets
 exit
 :ltsb2016
-echo æ­£åœ¨æ¿€æ´»Windows 10 Enterprise 2016 LTSB...
+echo ÕýÔÚ¼¤»îWindows 10 Enterprise 2016 LTSB...
 slmgr.vbs -ipk DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ
 slmgr.vbs -skms home.dingstudio.cn
 slmgr.vbs -ato
-echo æ¿€æ´»æµç¨‹å·²ç»“æŸï¼Œè¯·æ£€æŸ¥æ˜¯å¦æœ‰æç¤ºæ¡†æç¤ºâ€æˆåŠŸæ¿€æ´»äº†ç³»ç»Ÿâ€œã€‚æŒ‰ä»»æ„é”®é€€å‡ºï¼
+echo ¼¤»îÁ÷³ÌÒÑ½áÊø£¬Çë¼ì²éÊÇ·ñÓÐÌáÊ¾¿òÌáÊ¾¡±³É¹¦¼¤»îÁËÏµÍ³¡°¡£°´ÈÎÒâ¼üÍË³ö£¡
 @pause>nul
 exit
 :ltsb2016n
-echo æ­£åœ¨æ¿€æ´»Windows 10 Enterprise 2016 LTSB N...
+echo ÕýÔÚ¼¤»îWindows 10 Enterprise 2016 LTSB N...
 slmgr.vbs -ipk QFFDN-GRT3P-VKWWX-X7T3R-8B639
 slmgr.vbs -skms home.dingstudio.cn
 slmgr.vbs -ato
-echo æ¿€æ´»æµç¨‹å·²ç»“æŸï¼Œè¯·æ£€æŸ¥æ˜¯å¦æœ‰æç¤ºæ¡†æç¤ºâ€æˆåŠŸæ¿€æ´»äº†ç³»ç»Ÿâ€œã€‚æŒ‰ä»»æ„é”®é€€å‡ºï¼
+echo ¼¤»îÁ÷³ÌÒÑ½áÊø£¬Çë¼ì²éÊÇ·ñÓÐÌáÊ¾¿òÌáÊ¾¡±³É¹¦¼¤»îÁËÏµÍ³¡°¡£°´ÈÎÒâ¼üÍË³ö£¡
 @pause>nul
 exit
 :svr2016std
-echo æ­£åœ¨æ¿€æ´»Windows Server 2016 Standard...
+echo ÕýÔÚ¼¤»îWindows Server 2016 Standard...
 slmgr.vbs -ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
 slmgr.vbs -skms home.dingstudio.cn
 slmgr.vbs -ato
-echo æ¿€æ´»æµç¨‹å·²ç»“æŸï¼Œè¯·æ£€æŸ¥æ˜¯å¦æœ‰æç¤ºæ¡†æç¤ºâ€æˆåŠŸæ¿€æ´»äº†ç³»ç»Ÿâ€œã€‚æŒ‰ä»»æ„é”®é€€å‡ºï¼
+echo ¼¤»îÁ÷³ÌÒÑ½áÊø£¬Çë¼ì²éÊÇ·ñÓÐÌáÊ¾¿òÌáÊ¾¡±³É¹¦¼¤»îÁËÏµÍ³¡°¡£°´ÈÎÒâ¼üÍË³ö£¡
 @pause>nul
 exit
 :svr2016dtc
-echo æ­£åœ¨æ¿€æ´»Windows Server 2016 Datacenter...
+echo ÕýÔÚ¼¤»îWindows Server 2016 Datacenter...
 slmgr.vbs -ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
 slmgr.vbs -skms home.dingstudio.cn
 slmgr.vbs -ato
-echo æ¿€æ´»æµç¨‹å·²ç»“æŸï¼Œè¯·æ£€æŸ¥æ˜¯å¦æœ‰æç¤ºæ¡†æç¤ºâ€æˆåŠŸæ¿€æ´»äº†ç³»ç»Ÿâ€œã€‚æŒ‰ä»»æ„é”®é€€å‡ºï¼
+echo ¼¤»îÁ÷³ÌÒÑ½áÊø£¬Çë¼ì²éÊÇ·ñÓÐÌáÊ¾¿òÌáÊ¾¡±³É¹¦¼¤»îÁËÏµÍ³¡°¡£°´ÈÎÒâ¼üÍË³ö£¡
 @pause>nul
 exit
 :svr2016ets
-echo æ­£åœ¨æ¿€æ´»Windows Server 2016 Essentials...
+echo ÕýÔÚ¼¤»îWindows Server 2016 Essentials...
 slmgr.vbs -ipk JCKRF-N37P4-C2D82-9YXRT-4M63B
 slmgr.vbs -skms home.dingstudio.cn
 slmgr.vbs -ato
-echo æ¿€æ´»æµç¨‹å·²ç»“æŸï¼Œè¯·æ£€æŸ¥æ˜¯å¦æœ‰æç¤ºæ¡†æç¤ºâ€æˆåŠŸæ¿€æ´»äº†ç³»ç»Ÿâ€œã€‚æŒ‰ä»»æ„é”®é€€å‡ºï¼
+echo ¼¤»îÁ÷³ÌÒÑ½áÊø£¬Çë¼ì²éÊÇ·ñÓÐÌáÊ¾¿òÌáÊ¾¡±³É¹¦¼¤»îÁËÏµÍ³¡°¡£°´ÈÎÒâ¼üÍË³ö£¡
 @pause>nul
 exit
